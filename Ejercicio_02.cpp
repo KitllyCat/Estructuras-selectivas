@@ -7,6 +7,12 @@ int main(){
     cout << "Ingresa el monto total de su compra: ";
     cin >> montoT;
 	
+	if (montoT<=0) {
+		cout<<"El monto no puede ser 0, o menor"<<endl;
+		return 1;
+	}
+	
+	
     if (montoT > 1000) {
         descuento = (montoT/100)*10;
         montoF = montoT - descuento;
