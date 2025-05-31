@@ -5,8 +5,15 @@ int main() {
     int numCamisas;
     float precioU, montoT, descuento=0, pagoM;
     
-    cout << "Ingresa el numero de camisas compradas: "<<endl;
-    cin >> numCamisas;
+    do {
+    	cout << "Ingresa el numero de camisas compradas: "<<endl;
+    	cin >> numCamisas;
+    	
+    	if (numCamisas <= 0){
+			cout<<"La cantidad de camisas no puede ser cero"<<endl;
+		}
+	}while(numCamisas<=0);
+	
     cout << "Ingresa el precio unitario por camisa: s/";
     cin >> precioU;
 
